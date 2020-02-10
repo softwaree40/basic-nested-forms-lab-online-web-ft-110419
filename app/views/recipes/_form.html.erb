@@ -5,7 +5,7 @@
 <br>
 <p>Add Ingredient</p>
 <%=fields_for :ingredient do |ingredient|%>
-<%= ingredient.field.label :name %>
+<%= ingredient.label :name %>
 <%= ingredient.text_field :name %>
 <br>
 <%= ingredient.label :quantity %>
