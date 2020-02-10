@@ -3,14 +3,14 @@
 <%= f.label :Title %>
 <%= f.text_field :title %>
 <br>
-<p>Add Ingredient</p>
-<%=fields_for :ingredient do |ingredient|%>
-<%= ingredient.label :name %>
-<%= ingredient.text_field :name %>
-<br>
-<%= ingredient.label :quantity %>
-<%= ingredient.text_field :quantity %>
-<%end%>
+<h3>Ingredients</h3>
+  <%= f.fields_for :ingredients do |ingredient| %>
+    <%= ingredient.label :name %><br>
+    <%= ingredient.text_field :name %><br>
+
+    <%= ingredient.label :quantity %><br>
+    <%= ingredient.text_field :quantity %><br>
+  <% end %>
 <br>
 <%= f.submit %>
 <%end%>
